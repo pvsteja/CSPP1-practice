@@ -4,3 +4,4 @@ while 2<=i:
 	print(i)
 	i=i-2
 	
+	
