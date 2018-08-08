@@ -7,7 +7,7 @@ letters in letters_guessed are in secret_word. This shouldn't be too different f
 '''
 def get_guessed_word(secret_word, letters_guessed):
     """keyword"""
-    str_a = ' '
+    str_a = ''
     for char in secret_word:
         if char in letters_guessed:
             str_a = str_a + char
