@@ -10,8 +10,6 @@ def inc(a):
     return a+1
     
     
-
-
 def main():
     data = input()
     data = data.split()
