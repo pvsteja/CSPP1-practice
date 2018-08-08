@@ -6,7 +6,8 @@ returns a string that is comprised of letters and underscores, based on what
 letters in letters_guessed are in secret_word. This shouldn't be too different from isWordGuessed!
 '''
 def get_guessed_word(secret_word, letters_guessed):
-    str_a = ''
+    """keyword"""
+    str_a = ' '
     for char in secret_word:
         if char in letters_guessed:
             str_a = str_a + char
