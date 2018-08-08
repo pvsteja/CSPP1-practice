@@ -9,7 +9,7 @@ secret_word are in letters_guessed) and False otherwise.
 
 def is_word_guessed(secret_word, letters_guessed):
     """secretwords"""
-    count_o = 1
+    count_o = 0
     for char in secret_word:
         if char in letters_guessed:
             count_o += 1
