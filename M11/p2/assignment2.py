@@ -20,7 +20,6 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-    a={}
     for char in word:
         if char in hand:
             hand[char] = hand[char]-1
