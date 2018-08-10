@@ -1,29 +1,29 @@
-"""Exercise: Is In"""
-# Write a Python function, isIn(char, aStr)
-# that takes in two arguments a character and String
-# returns the isIn(char, aStr) which retuns a boolean value.
-
-# This function takes in two arguments character and String and returns one boolean value.
-
-def is_in(char, a_str):
-    '''
+"""
+Exercise: Is In
+Write a Python function, is_in(char, input_str), that takes in two arguments
+a character and String and returns the isIn(char, aStr) which retuns a
+boolean value.
+This function takes in two arguments character and String and returns one
+boolean value.
+"""
+def is_in(char, input_str):
+    """
     char: a single character
-    aStr: an alphabetized string
-    returns: True if char is in aStr; False otherwise
-    '''
+    input_str: an alphabetized string
+    returns: True if char is in input_str; False otherwise
+    """
     # Your code here
-    len_str = len(a_str)
-    if len_str == 0:
+    length_inp = len(input_str)
+    if length_inp == 0:
         return False
-    else:
-        if char == a_str[len_str//2]:
-            return True
-        elif char < a_str[len_str//2]:
-            return is_in(char, a_str[:len_str//2])
-        return is_in(char, a_str[len_str//2])
+    if input_str[length_inp//2] == char:
+        return True
+    if input_str[length_inp//2] > char:
+        return is_in(char, input_str[0:length_inp//2])
+    return is_in(char, input_str[:length_inp-1])
 
 def main():
-    """isinfunction"""
+    """ function calling"""
     data = input()
     data = data.split()
     print(is_in((data[0][0]), data[1]))
