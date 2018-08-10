@@ -70,7 +70,7 @@ def hangman(secretWord):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE...
-    pass
+    
 
 
 
@@ -79,11 +79,11 @@ def main():
     Main function for the given program
     
     When you've completed your hangman function, uncomment these two lines
-	and run this file to test! (hint: you might want to pick your own
-	secretWord while you're testing)
-	'''
-	# secretWord = chooseWord(wordlist).lower()
-	# hangman(secretWord)
+    and run this file to test! (hint: you might want to pick your own
+    secretWord while you're testing)
+    '''
+    secretWord = chooseWord(wordlist).lower()
+    hangman(secretWord)
 
 
 if __name__ == "__main__":
