@@ -17,7 +17,7 @@ SCRABBLE_LETTER_VALUES = {
 
 WORDLIST_FILENAME = "words.txt"
 
-def loadWords():
+  def loadWords():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
     
