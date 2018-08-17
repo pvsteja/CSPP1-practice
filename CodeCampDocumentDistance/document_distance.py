@@ -4,30 +4,30 @@
 import math
 FILE_NAME = "stopwords.txt"
 def similarity(dict_1, dict_2):
-   '''
+    '''
        Compute the document distance as given in the PDF
-   '''
-   inp_1 = ""
-   inp_2 = ""
-   for word_s in dict_1:
-       if word_s not in '!@#$%^&*()_+-=,.?1234567890':
-           if word_s not in"'":
-               inp_1 += word_s
+    '''
+    inp_1 = ""
+    inp_2 = ""
+    for word_s in dict_1:
+        if word_s not in '!@#$%^&*()_+-=,.?1234567890':
+            if word_s not in"'":
+              inp_1 += word_s
    
-   for word_s in dict_2:
-       if word_s not in '!@#$%^&*()_+-=,.?1234567890':
-           if word_s not in "'":
-               inp_2 += word_s
+    for word_s in dict_2:
+        if word_s not in '!@#$%^&*()_+-=,.?1234567890':
+          if word_s not in "'":
+            inp_2 += word_s
    
-   inp_1 = inp_1.split()
-   inp_2 = inp_2.split()
-   list_3 = inp_1 + inp_2
+    inp_1 = inp_1.split()
+    inp_2 = inp_2.split()
+    list_3 = inp_1 + inp_2
    """combining the 2 list into one and then using
    the count key word to check for the count of that word"""
-   a_dict = {}
-   for word in list_3:
-       if word not in load_stopwords(FILE_NAME).keys():
-           a_dict[word] = (inp_1.count(word), inp_2.count(word))
+    a_dict = {}
+    for word in list_3:
+        if word not in load_stopwords(FILE_NAME).keys():
+            a_dict[word] = (inp_1.count(word), inp_2.count(word))
    numerator, add_1, add_2 = 0, 0, 0
    """for checking the values and calucating the value3"""
    for key_check in a_dict:
