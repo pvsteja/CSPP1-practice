@@ -1,4 +1,3 @@
-Sid [8:20 PM]
 '''
    Document Distance - A detailed description is given in the PDF
 '''
