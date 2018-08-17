@@ -26,15 +26,15 @@ def similarity(dict_1, dict_2):
     print(inp_2)
     inp_3 = inp_1 + inp_2
     print(inp_3)
-   """combining the 2 list into one and then using
-   the count key word to check for the count of that word"""
+    """combining the 2 list into one and then using
+    the count key word to check for the count of that word"""
     a_dict = {}
     for word in inp_3:
         if word not in load_stopwords(FILE_NAME).keys():
             a_dict[word] = (inp_1.count(word), inp_2.count(word))
     print(a_dict)
     numerator, add_1, add_2 = 0, 0, 0
-   """for checking the values and calucating the value3"""
+    """for checking the values and calucating the value3"""
     for key_check in a_dict:
         numerator += a_dict[key_check][0]*a_dict[key_check][1]
         add_1 += a_dict[key_check][0] ** 2
@@ -43,9 +43,9 @@ def similarity(dict_1, dict_2):
     value_check = numerator/denominator
     return value_check
 def load_stopwords(filename):
-   '''
-       loads stop words from a file and returns a dictionary
-   '''
+    '''
+        loads stop words from a file and returns a dictionary
+    '''
   stopwords = {}
   with open(filename, 'r') as file:
     for line in file:
