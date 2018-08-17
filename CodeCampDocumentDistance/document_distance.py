@@ -18,16 +18,16 @@ def similarity(dict_1, dict_2):
        if word_s not in '!@#$%^&*()_+-=,.?1234567890':
            if word_s not in "'":
                inp_2 += word_s
-    print(inp_2)
-    inp_1 = inp_1.split()
-    print(inp_1)
-    inp_2 = inp_2.split()
-    print(inp_2)
-    inp_3 = inp_1 + inp_2
-    print(inp_3)
+   print(inp_2)
+   inp_1 = inp_1.split()
+   print(inp_1)
+   inp_2 = inp_2.split()
+   print(inp_2)
+   inp_3 = inp_1 + inp_2
+   print(inp_3)
    """combining the 2 list into one and then using
    the count key word to check for the count of that word"""
-    a_dict = {}
+   a_dict = {}
    for word in inp_3:
        if word not in load_stopwords(FILE_NAME).keys():
            a_dict[word] = (inp_1.count(word), inp_2.count(word))
