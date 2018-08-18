@@ -1,0 +1,106 @@
+def add_amount(amount, username, paytm, prev_bal):
+    amount = int(input("Enter the amount to be added"))
+    paytm[username]=amount+prev_bal
+    # prev_bal
+    print("The updated wallet balance is ", paytm[username])
+    
+    do_trans(paytm[username], username, paytm, prev_bal)
+
+def deduct_amount(amount, username, paytm):
+    print("Enter the amount to be deducted")
+    ded = int(input())
+    amount = amount - ded
+    if amount < ded:
+        print("There is no available balance for this transaction")
+        print("Please add the following amount to continue the transaction", abs(amount))
+        return add_amount(amount)
+        # return None
+    else:
+        print("The available balance is")
+        return amount
+
+def logout(username, paytm):
+    choice = input("To re-login: login\n To exit: exit\n To add user : adduser\n")
+    if choice == 'login':
+        username = ''
+        prev_bal = 0
+        do_login(username, paytm, prev_bal)
+    if choice == 'adduser':
+        add_user(paytm)
+    if choice != 'exit':
+        print("Invalid choice.")
+        logout()
+
+
+def add_user(paytm):
+    username = input("Enter new username to creat wallet : ")
+    money = input("You're new user, to make transactions add money to your wallet :")
+    paytm[username]=add_amount(money, username, paytm, prev_bal)
+    do_trans(money, username, paytm)
+
+
+
+def do_trans(money, username, paytm, prev_bal):
+    trans = input("To add input: add\nTo deduct input: ded\nTo logout: logout \n")
+
+    if trans == 'add':
+        add_amount(money, username, paytm, prev_bal)
+    elif trans == 'ded':
+        deduct_amount(money, username, paytm, prev_bal)
+    elif trans == 'logout':
+        print("Successfully logged out.")
+        logout(username, paytm)
+
+def do_login(username, paytm, prev_bal):
+    username = input("Enter username to login: ")
+    if username not in paytm:
+        print("You're new user, to make transactions, you need to add money to your wallet :")
+        paytm[username]=add_amount(money, username, paytm, prev_bal)
+        do_trans(money, username, paytm, prev_bal)
+    do_trans(paytm[username], username, paytm, prev_bal)
+
+def main():
+    paytm = {}
+    prev_bal=int(0)
+    username = ''
+    
+    do_login(username, paytm, prev_bal)
+    
+main()
+
+
+
+
+
+Second One:
+def add_amount(amount):
+	print("Enter the amount to be added")
+	add = int(input())
+	print("The available balance is ")
+	amount = amount + add
+	return amount
+def deduct_amount(amount):
+	print("Enter the amount to be deducted")
+	ded = int(input())
+	amount = amount - ded
+	if amount < ded:
+		print("There is no available balance for this transaction")
+		print("Please add the following amount to continue the transaction", abs(amount))
+		return add_amount(amount)
+		# return None
+	else:
+		print("The available balance is")
+		return amount
+
+def main():
+	print("Enter the available amount")
+	amount = int(input())
+	print("Enter if you want to add the amount or deduct the amount")
+	print("if add input 'add' to deduct input 'ded'")
+	check = input()
+
+	if check == 'add':
+		print(add_amount(amount))
+	elif check == 'ded':
+		print(deduct_amount(amount))
+main()

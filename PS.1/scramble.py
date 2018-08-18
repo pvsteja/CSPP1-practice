@@ -289,6 +289,6 @@ r to play with previous hand\ne to exit: ")
 #
 # Build data structures used for entire session and play game
 #
-if __name__ == '__main__':
+if __name__ == '__main__': 
     WORDLIST = load_words()
     play_game(WORDLIST)
