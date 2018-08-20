@@ -168,7 +168,7 @@ def is_validword(word, hand, word_list):
     if word not in word_list:
         return False
     for char in word_dict:
-        if word_dict.get(char) > hand.get(char,0):
+        if word_dict.get(char) > hand.get(char, 0):
             return False
     return True
 
@@ -289,6 +289,6 @@ r to play with previous hand\ne to exit: ")
 #
 # Build data structures used for entire session and play game
 #
-if __name__ == '__main__': 
+if __name__ == '__main__':
     WORDLIST = load_words()
     play_game(WORDLIST)
