@@ -58,6 +58,7 @@ def read_matrix():
             return None
     # print(rows, cols)
     # print(matrix)
+    return matrix
       
 
 def main():
@@ -68,7 +69,8 @@ def main():
     M_2 = read_matrix()
 
     # add matrix 1 and matrix 2
-    print(add_matrix(M_1,M_2))
+    if M_1 != None and M_2 != None:
+        print(add_matrix(M_1,M_2))
 
     # multiply matrix 1 and matrix 2
 
