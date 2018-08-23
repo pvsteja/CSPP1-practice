@@ -9,11 +9,11 @@ def mult_matrix(m1, m2):
     mult_matrix = []
     a = []
     b = []
-    if len(M_1) == len(M_2):
-        for i in range(M_1):
-            for j in range(M_2[0]):
+    if len(m1) == len(m2):
+        for i in range(m1):
+            for j in range(m2[0]):
                 sum = 0
-                for k in range(len(M_2)):
+                for k in range(len(m2)):
                     sum = sum + (m1[i][k]*m2[k][j])
                 a.append(sum)
             b.append(a)
