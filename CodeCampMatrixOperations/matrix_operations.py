@@ -32,7 +32,7 @@ def add_matrix(M_1, M_2):
         print("Error: Matrix shapes invalid for addition")
         return None     
 
-def read_matrix():
+def read_matrix(): 
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -52,7 +52,7 @@ def read_matrix():
         # for j in line: 
         #     lst.append(int(j))
         # matrix.append(lst)
-            matrix.append([int(j) for j in line])
+            matrix.append([int(j)])
         else:
             print("Error: Invalid input for the matrix")
             return None
