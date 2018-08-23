@@ -27,7 +27,7 @@ def add_matrix(M_1, M_2):
             for j in range(M_1[0]):
                 lst = (M_1[i][j]+M_2[i][j])
                 add_matrix.append(lst)
-            return add_matrix
+        return add_matrix
     else:
         print("Error: Matrix shapes invalid for addition")
         return None     
@@ -46,18 +46,19 @@ def read_matrix():
     matrix = []
     for i in range(rows):
         line = input().split(" ")
+        if len(line) == cols
         # print(i, line)
         # lst = []
         # for j in line: 
         #     lst.append(int(j))
         # matrix.append(lst)
-        matrix.append([int(j) for j in line])
+            matrix.append([int(j) for j in line])
+        else:
+            print("Error: Invalid input for the matrix")
+            return None
     # print(rows, cols)
     # print(matrix)
-        for i in range(0, len(line)-1):
-            if len(line) != cols:
-                return "error: Invalid input for the matrix"
-    return matrix
+      
 
 def main():
     # read matrix 1
