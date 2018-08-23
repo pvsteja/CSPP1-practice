@@ -66,12 +66,9 @@ def main():
     M_2 = read_matrix()
 
     # add matrix 1 and matrix 2
-    M_3 = add_matrix(M_1,M_2)
-    print(M_3)
+    print(add_matrix(M_1,M_2))
 
     # multiply matrix 1 and matrix 2
-    print()
-    pass
 
 if __name__ == '__main__':
     main()
