@@ -52,7 +52,7 @@ def read_matrix():
         # for j in line: 
         #     lst.append(int(j))
         # matrix.append(lst)
-            matrix.append([int(j)])
+            matrix.append([int(j) for j in line])
         else:
             print("Error: Invalid input for the matrix")
             return None
