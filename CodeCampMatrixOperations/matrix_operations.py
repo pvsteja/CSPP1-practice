@@ -26,7 +26,7 @@ def add_matrix(M_1, M_2):
             lst =[]
             for j in range(len(M_1[0])):
                 lst.append(int(M_1[i][j]) + int(M_2[i][j]))
-                add_matrix.append(lst)
+            add_matrix.append(lst)
         return add_matrix
     else:
         print("Error: Matrix shapes invalid for addition")
