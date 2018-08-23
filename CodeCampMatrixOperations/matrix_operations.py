@@ -22,8 +22,6 @@ def mult_matrix(m1, m2):
             i += 1
             a = []
         return b
-    print("Error: Matrix shapes invalid for mult")
-    return None
 
 def add_matrix(matrix_1, matrix_2):
     '''
@@ -43,8 +41,9 @@ def add_matrix(matrix_1, matrix_2):
             add_matrix.append(lst)
             i += 1
         return add_matrix
-    print("Error: Matrix shapes invalid for addition")
-    return None
+    else:
+        print("Error: Matrix shapes invalid for addition")
+        return None
 
 def read_matrix():
     '''
@@ -67,9 +66,9 @@ def read_matrix():
         #     lst.append(int(j))
         # matrix.append(lst)
             matrix.append([int(j) for j in line])
-            i += 1
-        print("Error: Invalid input for the matrix")
-        return None
+        else:
+            print("Error: Invalid input for the matrix")
+            return None
     # print(rows, cols)
     # print(matrix)
     return matrix
