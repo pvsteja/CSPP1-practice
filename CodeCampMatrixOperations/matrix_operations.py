@@ -20,16 +20,17 @@ def add_matrix(M_1, M_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    add_matrix[i][j] = []
-    if len(M_1) == len(M_2) and len(M_1[0]) == len(M_2[0]):
-        for i in range(M_1):
+    add_matrix = []
+    if len(M_1) == len(M_2):
+        for i in range(len(M_1)):
             lst =[]
             for j in range(M_1[0]):
                 lst = (M_1[i][j]+M_2[i][j])
                 add_matrix.append(lst)
             return add_matrix
-
-        return error     
+    else:
+        print("Error: Matrix shapes invalid for addition")
+        return None     
 
 def read_matrix():
     '''
