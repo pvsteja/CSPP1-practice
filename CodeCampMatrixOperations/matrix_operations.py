@@ -1,7 +1,7 @@
 """
 defining the matrix multiplication and the matrix addition.
 """
-def mult_matrix(matrix_1, matrix_2):
+def mult_matrix(1_mat, 2_mat):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -9,30 +9,30 @@ def mult_matrix(matrix_1, matrix_2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(matrix_1[0]) != len(matrix_2):
+    if len(1_mat[0]) != len(2_mat):
         print("Error: Matrix shapes invalid for mult")
         return None
     # else:
-    res_mul = []
-    b_str = []
-    # rows = len(matrix_1)
-    cols = len(matrix_2[0])
-    rows_2 = len(matrix_2)
-    for i, _ in enumerate(matrix_1):
+    mul_result = []
+    st_a = []
+    # rows = len(1_mat)
+    cols = len(2_mat[0])
+    rows_2 = len(2_mat)
+    for i, _ in enumerate(1_mat):
         # print(i, _)
         for j in range(cols):
             sum_value = 0
             for k in range(rows_2):
-                sum_value += (matrix_1[i][k] * matrix_2[k][j])
+                sum_value += (1_mat[i][k] * 2_mat[k][j])
                 k += 1
-            b_str.append(sum_value)
+            st_a.append(sum_value)
             j += 1
-        res_mul.append(b_str)
+        mul_result.append(st_a)
         i += 1
-        b_str = []
-    return res_mul
+        st_a = []
+    return mul_result
 
-def add_matrix(matrix_1, matrix_2):
+def add_matrix(1_mat, 2_mat):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -40,16 +40,16 @@ def add_matrix(matrix_1, matrix_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if len(matrix_1) != len(matrix_2) and len(matrix_1[0]) != len(matrix_2[0]):
+    if len(1_mat) != len(2_mat) and len(1_mat[0]) != len(2_mat[0]):
         print("Error: Matrix shapes invalid for addition")
         return None
     # else:
     add = []
-    rows = len(matrix_1)
+    rows = len(1_mat)
     for i in range(rows):
         row = []
-        for j in range(len(matrix_2[0])):
-            row.append(matrix_1[i][j] + matrix_2[i][j])
+        for j in range(len(2_mat[0])):
+            row.append(1_mat[i][j] + 2_mat[i][j])
             j += 1
         add.append(row)
         i += 1
@@ -81,24 +81,24 @@ def main():
     calling the funtions and printing the output.
     """
     # read matrix 1
-    matrix_1 = read_matrix()
+    1_mat = read_matrix()
 
     # read matrix 2
-    matrix_2 = read_matrix()
+    2_mat = read_matrix()
 
-    # print(matrix_1)
-    # print(matrix_2)
+    # print(1_mat)
+    # print(2_mat)
 
     # add matrix 1 and matrix 2
-    # matrix_sum = add_matrix(matrix_1, matrix_2)
-    if (matrix_1 and matrix_2):
-        sum_matrix = add_matrix(matrix_1, matrix_2)
+    # matrix_sum = add_matrix(1_mat, 2_mat)
+    if (1_mat and 2_mat):
+        sum_matrix = add_matrix(1_mat, 2_mat)
         print(sum_matrix)
-        print(mult_matrix(matrix_1, matrix_2))
+        print(mult_matrix(1_mat, 2_mat))
         # print(mult_mat)
 
     # multiply matrix 1 and matrix 2
-    # matrix_mul = mult_matrix(matrix_1, matrix_2)
+    # matrix_mul = mult_matrix(1_mat, 2_mat)
 
 if __name__ == '__main__':
     main()
