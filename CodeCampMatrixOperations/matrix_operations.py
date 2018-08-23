@@ -54,7 +54,7 @@ def read_matrix():
     # print(rows, cols)
     # print(matrix)
         for i in range(0, len(line)-1):
-            if len(line) != n:
+            if len(line) != cols:
                 return "error: Invalid input for the matrix"
     return matrix
 
