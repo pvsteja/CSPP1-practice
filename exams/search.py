@@ -38,12 +38,12 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query = query.lower().split('')
-    list_of_id = [1, 2, 3]
+    list_id = []
     for word in query:
         if word in search_index:
             for i in search_index[word]:
-                list_of_id += [i[0]]
-    return set(list_of_id)
+                list_id += [i[0]]
+    return set(list_id)
 
 
 def process_queries(search_index, queries):
@@ -74,6 +74,6 @@ def main():
 
     # call process queries
     process_queries(search_index, queries)
-
+ 
 if __name__ == '__main__':
     main()
