@@ -46,7 +46,7 @@ def read_matrix():
     matrix = []
     for i in range(rows):
         line = input().split(" ")
-        if len(line) == cols
+        if len(line) == cols:
         # print(i, line)
         # lst = []
         # for j in line: 
