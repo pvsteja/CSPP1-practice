@@ -1,7 +1,7 @@
 """
 defining the matrix multiplication and the matrix addition.
 """
-def mult_matrix(1_mat, 2_mat):
+def mult_matrix(matrix_inp1, matrix_inp2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -9,21 +9,21 @@ def mult_matrix(1_mat, 2_mat):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(1_mat[0]) != len(2_mat):
+    if len(matrix_inp1[0]) != len(matrix_inp2):
         print("Error: Matrix shapes invalid for mult")
         return None
     # else:
     mul_result = []
     st_a = []
-    # rows = len(1_mat)
-    cols = len(2_mat[0])
-    rows_2 = len(2_mat)
-    for i, _ in enumerate(1_mat):
+    # rows = len(matrix_inp1)
+    cols = len(matrix_inp2[0])
+    rows_2 = len(matrix_inp2)
+    for i, _ in enumerate(matrix_inp1):
         # print(i, _)
         for j in range(cols):
             sum_value = 0
             for k in range(rows_2):
-                sum_value += (1_mat[i][k] * 2_mat[k][j])
+                sum_value += (matrix_inp1[i][k] * matrix_inp2[k][j])
                 k += 1
             st_a.append(sum_value)
             j += 1
@@ -32,7 +32,7 @@ def mult_matrix(1_mat, 2_mat):
         st_a = []
     return mul_result
 
-def add_matrix(1_mat, 2_mat):
+def add_matrix(matrix_inp1, matrix_inp2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -40,16 +40,16 @@ def add_matrix(1_mat, 2_mat):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if len(1_mat) != len(2_mat) and len(1_mat[0]) != len(2_mat[0]):
+    if len(matrix_inp1) != len(matrix_inp2) and len(matrix_inp1[0]) != len(matrix_inp2[0]):
         print("Error: Matrix shapes invalid for addition")
         return None
     # else:
     add = []
-    rows = len(1_mat)
+    rows = len(matrix_inp1)
     for i in range(rows):
         row = []
-        for j in range(len(2_mat[0])):
-            row.append(1_mat[i][j] + 2_mat[i][j])
+        for j in range(len(matrix_inp2[0])):
+            row.append(matrix_inp1[i][j] + matrix_inp2[i][j])
             j += 1
         add.append(row)
         i += 1
@@ -81,24 +81,24 @@ def main():
     calling the funtions and printing the output.
     """
     # read matrix 1
-    1_mat = read_matrix()
+    matrix_inp1 = read_matrix()
 
     # read matrix 2
-    2_mat = read_matrix()
+    matrix_inp2 = read_matrix()
 
-    # print(1_mat)
-    # print(2_mat)
+    # print(matrix_inp1)
+    # print(matrix_inp2)
 
     # add matrix 1 and matrix 2
-    # matrix_sum = add_matrix(1_mat, 2_mat)
-    if (1_mat and 2_mat):
-        sum_matrix = add_matrix(1_mat, 2_mat)
+    # matrix_sum = add_matrix(matrix_inp1, matrix_inp2)
+    if (matrix_inp1 and matrix_inp2):
+        sum_matrix = add_matrix(matrix_inp1, matrix_inp2)
         print(sum_matrix)
-        print(mult_matrix(1_mat, 2_mat))
+        print(mult_matrix(matrix_inp1, matrix_inp2))
         # print(mult_mat)
 
     # multiply matrix 1 and matrix 2
-    # matrix_mul = mult_matrix(1_mat, 2_mat)
+    # matrix_mul = mult_matrix(matrix_inp1, matrix_inp2)
 
 if __name__ == '__main__':
     main()
