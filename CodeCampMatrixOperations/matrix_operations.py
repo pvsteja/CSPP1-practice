@@ -9,18 +9,18 @@ def mult_matrix(m1, m2):
     mult_matrix = []
     a = []
     b = []
-    if len(M_1) == len(M_2):
-        for i in range(M_1):
-            for j in range(M_2[0]):
+    if len(matrix_1) == len(matrix_2):
+        for i in range(matrix_1):
+            for j in range(matrix_2[0]):
                 sum = 0
-                for k in range(len(M_2)):
+                for k in range(len(matrix_2)):
                     sum = sum + (m1[i][k]*m2[k][j])
                 a.append(sum)
             b.append(a)
             a = []
         return b
 
-def add_matrix(M_1, M_2):
+def add_matrix(matrix_1, matrix_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -29,11 +29,11 @@ def add_matrix(M_1, M_2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     add_matrix = []
-    if len(M_1) == len(M_2):
-        for i in range(len(M_1)):
+    if len(matrix_1) == len(matrix_2):
+        for i in range(len(matrix_1)):
             lst =[]
-            for j in range(len(M_1[0])):
-                lst.append(int(M_1[i][j]) + int(M_2[i][j]))
+            for j in range(len(matrix_1[0])):
+                lst.append(int(matrix_1[i][j]) + int(matrix_2[i][j]))
             add_matrix.append(lst)
         return add_matrix
     else:
@@ -71,14 +71,15 @@ def read_matrix():
 
 def main():
     # read matrix 1
-    M_1 = read_matrix()
+    matrix_1 = read_matrix()
 
     # read matrix 2
-    M_2 = read_matrix()
+    matrix_2 = read_matrix()
 
     # add matrix 1 and matrix 2
-    if M_1 != None and M_2 != None:
-        print(add_matrix(M_1,M_2))
+    if matrix_1 != None and matrix_2 != None:
+        print(add_matrix(matrix_1, matrix_2))
+        print(mult_matrix(matrix_1, matrix_2))
 
     # multiply matrix 1 and matrix 2
 
