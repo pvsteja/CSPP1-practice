@@ -6,8 +6,8 @@ def clean_string(string):
     return inp_1
 """removing special characters"""
 def main():
-    string_1 = input()
-    print(clean_string(string_1.replace(" ","")))
+    string = input()
+    print(clean_string(string.replace(" ","")))
 if __name__ == '__main__':
     main()
     
