@@ -2,7 +2,7 @@
 Write a python program to read multiple lines of text input and store the input into a string.
 '''
 def main():
-    inp_1 =' '
+    inp_1 = ''
     line = int(input())
     for i in range(line):
         i += 1
