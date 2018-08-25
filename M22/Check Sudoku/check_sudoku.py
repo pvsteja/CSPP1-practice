@@ -8,9 +8,6 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 
-def check_sudoku(sudoku):
-
-    
 def check_sudoku(lst_1):
     '''
     Your solution goes here. You may add other helper functions as needed.
