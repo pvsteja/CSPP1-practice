@@ -25,23 +25,22 @@ def check_sudoku(lst_1):
     
     if "".join(sorted(lst_1[0][0]+lst_1[0][1]+lst_1[0][2]+ lst_1[1][0]+ lst_1[1][1]+lst_1[1][2]+lst_1[2][0]+lst_1[2][1]+lst_1[2][2]))!= "123456789":
         return False
-
-        elif "".join(sorted(lst_1[0][3]+lst_1[0][4]+lst_1[0][5]+ lst_1[1][3]+ lst_1[1][4]+lst_1[1][5]+lst_1[2][3]+lst_1[2][4]+lst_1[2][5]))!= "123456789":
-            return False
-            elif "".join(sorted(lst_1[0][6]+lst_1[0][7]+lst_1[0][8]+ lst_1[1][6]+ lst_1[1][7]+lst_1[1][8]+lst_1[2][6]+lst_1[2][7]+lst_1[2][8]))!= "123456789":
-                return False
-                elif "".join(sorted(lst_1[3][0]+lst_1[3][1]+lst_1[3][2]+ lst_1[4][0]+ lst_1[4][1]+lst_1[4][2]+lst_1[5][0]+lst_1[5][1]+lst_1[5][2]))!= "123456789":
-                    return False
-                    elif "".join(sorted(lst_1[3][3]+lst_1[3][4]+lst_1[3][5]+ lst_1[4][3]+ lst_1[4][4]+lst_1[4][5]+lst_1[5][3]+lst_1[5][4]+lst_1[5][5]))!= "123456789":
-                        return False
-                        elif "".join(sorted(lst_1[3][6]+lst_1[3][7]+lst_1[3][8]+ lst_1[4][6]+ lst_1[4][7]+lst_1[4][8]+lst_1[5][6]+lst_1[5][7]+lst_1[5][8]))!= "123456789":
-                            return False
-                            elif "".join(sorted(lst_1[6][0]+lst_1[6][1]+lst_1[6][2]+ lst_1[7][0]+ lst_1[7][1]+lst_1[7][2]+lst_1[8][0]+lst_1[8][1]+lst_1[8][2]))!= "123456789":
-                                return False
-                                elif "".join(sorted(lst_1[6][3]+lst_1[6][4]+lst_1[6][5]+ lst_1[7][3]+ lst_1[7][4]+lst_1[7][5]+lst_1[8][3]+lst_1[8][4]+lst_1[8][5]))!= "123456789":
-                                    return False
-                                    elif "".join(sorted(lst_1[6][6]+lst_1[6][7]+lst_1[6][8]+ lst_1[7][6]+ lst_1[7][7]+lst_1[7][8]+lst_1[8][6]+lst_1[8][7]+lst_1[8][8]))!= "123456789":
-                                        return False
+    if "".join(sorted(lst_1[0][3]+lst_1[0][4]+lst_1[0][5]+ lst_1[1][3]+ lst_1[1][4]+lst_1[1][5]+lst_1[2][3]+lst_1[2][4]+lst_1[2][5]))!= "123456789":
+        return False  
+    if "".join(sorted(lst_1[0][6]+lst_1[0][7]+lst_1[0][8]+ lst_1[1][6]+ lst_1[1][7]+lst_1[1][8]+lst_1[2][6]+lst_1[2][7]+lst_1[2][8]))!= "123456789":
+        return False 
+    if "".join(sorted(lst_1[3][0]+lst_1[3][1]+lst_1[3][2]+ lst_1[4][0]+ lst_1[4][1]+lst_1[4][2]+lst_1[5][0]+lst_1[5][1]+lst_1[5][2]))!= "123456789":
+        return False
+    if "".join(sorted(lst_1[3][3]+lst_1[3][4]+lst_1[3][5]+ lst_1[4][3]+ lst_1[4][4]+lst_1[4][5]+lst_1[5][3]+lst_1[5][4]+lst_1[5][5]))!= "123456789":
+        return False
+    if "".join(sorted(lst_1[3][6]+lst_1[3][7]+lst_1[3][8]+ lst_1[4][6]+ lst_1[4][7]+lst_1[4][8]+lst_1[5][6]+lst_1[5][7]+lst_1[5][8]))!= "123456789":
+        return False
+    if "".join(sorted(lst_1[6][0]+lst_1[6][1]+lst_1[6][2]+ lst_1[7][0]+ lst_1[7][1]+lst_1[7][2]+lst_1[8][0]+lst_1[8][1]+lst_1[8][2]))!= "123456789":
+        return False
+    if "".join(sorted(lst_1[6][3]+lst_1[6][4]+lst_1[6][5]+ lst_1[7][3]+ lst_1[7][4]+lst_1[7][5]+lst_1[8][3]+lst_1[8][4]+lst_1[8][5]))!= "123456789":
+        return False
+    if "".join(sorted(lst_1[6][6]+lst_1[6][7]+lst_1[6][8]+ lst_1[7][6]+ lst_1[7][7]+lst_1[7][8]+lst_1[8][6]+lst_1[8][7]+lst_1[8][8]))!= "123456789":
+        return False
     return True
 
 n = 9
