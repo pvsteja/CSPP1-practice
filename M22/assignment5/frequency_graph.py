@@ -6,14 +6,14 @@ frequency of each word. Display the frequency values using “#” as a text bas
 def frequency_graph(dictionary):
 	# frequency_graph dictionary (element_type -> int)
     freq = {}
-    dictionary = eval(input())
+    dictionary = input()
     for i in dictionary:
         freq[i] = freq.get(i, 0) + 1
     return freq
 
 """frequency dictionary"""
 def main():
-    dictionary = eval(input())
+    dictionary = input()
     frequency_graph(dictionary)
 
 if __name__ == '__main__':
